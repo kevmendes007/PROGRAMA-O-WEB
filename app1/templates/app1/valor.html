@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Temperaturas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        h1{
+          padding: 0px 0px 10px;
+        }
+
+        .container {
+          margin-bottom: 20px; /* Adiciona espaçamento vertical entre elementos dentro da div container */
+        }
+
+        .main{
+          background-color: white;
+          border-radius: 20px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          height: 70vh; /* Use 100% da altura da janela de visualização (viewport height) */
+          padding: 70px;
+          margin: auto;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20vh
+          font-family: 'Roboto', sans-serif;
+          flex-direction: column;
+        }
+
+        body {
+          margin: 0;
+          padding: 15px;
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          background: #BB0102;
+        }
+
+        .comic-button {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+          color: #fff;
+          background-color: #BB0102;
+          border: 2px solid #000;
+          border-radius: 10px;
+          box-shadow: 5px 5px 0px #000;
+          transition: all 0.3s ease;
+        }
+
+        .comic-button:hover {
+          background-color: #fff;
+          color: #BB0102;
+          border: 2px solid #BB0102;
+          box-shadow: 5px 5px 0px #BB0102;
+        }
+
+        .comic-button:active {
+          background-color: #fcf414;
+          box-shadow: none;
+          transform: translateY(4px);
+        }
+
+        a{
+          text-decoration: none;
+          color: currentColor;
+          }
+    </style>
+</head>
+<body>
+<div class="main d-flex justify-content-between align-items-center">
+    <h2>Valores de Temperatura Convertidos </h2>
+    <div class="my-4">
+        <p>Celsius: {{celsius}}</p>
+        <p>Fahrenheit: {{fahrenheit}}</p>
+        <p>Kelvin: {{kelvin}}</p>
+    </div>
+    <div class="my-3">
+        <button class="comic-button"><a href="{% url 'home' %}">Voltar</a></button>
+    </div>
+</div>
+</body>
+</html>
